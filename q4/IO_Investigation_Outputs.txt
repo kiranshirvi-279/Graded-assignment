@@ -1,0 +1,8 @@
+STDOUT from ls -l:
+(total output from ls -l when redirected to stdout.txt)
+
+STDERR from ls /not_a_real_path:
+(ls: cannot access '/not_a_real_path': No such file or directory)
+
+Combined output in combined.txt:
+(total output from ls -l followed by the error line from ls /not_a_real_path)

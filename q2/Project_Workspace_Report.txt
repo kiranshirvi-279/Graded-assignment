@@ -1,0 +1,37 @@
+Question 2: Secure Project Workspace Setup
+
+Workspace created:
+secure_workspace/
+secure_workspace/docs/
+secure_workspace/src/
+secure_workspace/logs/
+
+Files created:
+secure_workspace/docs/plan.txt
+secure_workspace/src/app.txt
+secure_workspace/logs/activity.log
+
+Directory and file permissions after setup:
+
+drwxr-x---+ 5 codespace codespace 4096 Jul  3 17:43 q2/secure_workspace
+
+drwxr-x---+ 2 codespace codespace 4096 Jul  3 17:44 q2/secure_workspace/docs
+
+drwxr-x---+ 2 codespace codespace 4096 Jul  3 17:44 q2/secure_workspace/logs
+
+drwxr-x---+ 2 codespace codespace 4096 Jul  3 17:44 q2/secure_workspace/src
+
+secure_workspace/docs:
+-rw-r----- 1 codespace codespace 0 Jul  3 17:44 plan.txt
+
+secure_workspace/logs:
+-rw-r----- 1 codespace codespace 0 Jul  3 17:44 activity.log
+
+secure_workspace/src:
+-rw-r----- 1 codespace codespace 0 Jul  3 17:44 app.txt
+
+Umask value used: 0022
+
+Explanation of permissions:
+The workspace directories are accessible only to the owner and group, while project files are readable by the owner and group only.
+This protects project documentation and source files from unauthorized access by other users on the system.

@@ -1,0 +1,25 @@
+Question 3: File System and Link Analysis
+
+Created files:
+original.txt
+hardlink.txt
+symlink.txt
+
+Inode information:
+original.txt and hardlink.txt share inode 1310751, showing they are two directory entries for the same file data.
+symlink.txt has inode 1310805 and points to original.txt.
+
+Comparison:
+- Hard link: another name for the same file content; both names share the same inode.
+- Symbolic link: a separate file that references the original file path.
+
+Effect of deleting the original file:
+- hardlink.txt still contains the file data because the inode remains until all hard links are removed.
+- symlink.txt becomes broken because it references the deleted path original.txt.
+
+Metadata collected:
+- hardlink.txt: regular file, inode 1310751, Links: 2
+- symlink.txt: symbolic link, inode 1310805, Links: 1
+
+Conclusion:
+Hard links preserve access to file contents after deleting the original name, while symbolic links depend on the target path.

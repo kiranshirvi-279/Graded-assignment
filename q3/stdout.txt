@@ -1,0 +1,4 @@
+total 4
+-rw-rw-rw- 1 codespace codespace 21 Jul  3 18:07 hardlink.txt
+-rw-rw-rw- 1 codespace codespace  0 Jul  3 18:07 stdout.txt
+lrwxrwxrwx 1 codespace codespace 12 Jul  3 18:07 symlink.txt -> original.txt

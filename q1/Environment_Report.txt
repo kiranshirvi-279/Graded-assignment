@@ -1,0 +1,27 @@
+Question 1: Linux Environment Verification
+
+Commands executed and outputs:
+
+whoami
+codespace
+
+groups
+codespace pipx python oryx golang docker sdkman rvm php conda nvs nvm hugo ssh
+
+echo "$SHELL"
+/bin/bash
+
+pwd
+/workspaces/Graded-assignment
+
+ls -ls
+total 24
+4 -rw-rw-rw-  1 codespace root        19 Jul  3 17:31 README.md
+4 drwxrwxrwx+ 2 codespace codespace 4096 Jul  3 17:32 q1
+4 drwxrwxrwx+ 3 codespace codespace 4096 Jul  3 17:43 q2
+4 drwxrwxrwx+ 2 codespace codespace 4096 Jul  3 17:48 q3
+4 drwxrwxrwx+ 2 codespace codespace 4096 Jul  3 17:52 q4
+4 drwxrwxrwx+ 2 codespace codespace 4096 Jul  3 17:33 q5
+
+Network connectivity test:
+Network: youtube.com reachable

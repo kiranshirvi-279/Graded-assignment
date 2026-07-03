@@ -1,0 +1,48 @@
+Question 5: Storage Health Assessment and Documentation
+
+Available storage devices:
+- loop0: 63.8M loop device
+- loop1: 91.7M loop device
+- loop2: 49.3M loop device
+- loop3: 257G loop device
+- loop4: 32G loop device mounted on /home/vscode/.minikube, /var/lib/docker, /workspaces/.codespaces/.persistedshare, /etc/hosts, /etc/hostname, /etc/resolv.conf, /workspaces
+- loop5: 500M loop device
+- sda: 45G disk with partition sda1 mounted on /tmp
+- sdb: 30G disk with partition sdb1 mounted on /workspaces/.codespaces/shared and related paths
+- sdc: 512G disk with partition sdc1
+- sr0: 628K ROM device
+
+Mounted file systems:
+- overlay mounted on /
+- proc mounted on /proc
+- tmpfs mounted on /dev
+- devpts mounted on /dev/pts
+- sysfs mounted on /sys
+
+Disk usage statistics from df -h:
+- /: 32G total, 9.7G used, 21G available, 33% used
+- /dev: 64M total, 0 used, 64M available, 0% used
+- /dev/shm: 64M total, 0 used, 64M available, 0% used
+- /vscode: 29G total, 24G used, 5.6G available, 81% used
+- /tmp: 44G total, 1.6G used, 41G available, 4% used
+- /workspaces: 32G total, 9.7G used, 21G available, 33% used
+
+Inode utilization from df -i:
+- /: 2097152 inodes total, 203170 used, 1893982 free, 10% used
+- /dev: 1016900 inodes total, 213 used, 1016687 free, 1% used
+- /dev/shm: 1016900 inodes total, 1 used, 1016899 free, 1% used
+- /vscode: 3870720 inodes total, 243379 used, 3627341 free, 7% used
+- /tmp: 2949120 inodes total, 37 used, 2949083 free, 1% used
+- /workspaces: 2097152 inodes total, 203170 used, 1893982 free, 10% used
+
+Storage health observations:
+- The overlay filesystem has healthy free space and inode availability.
+- The /vscode filesystem is the most utilized at 81% disk usage, which may need monitoring.
+- Temporary and dev filesystems have ample free space and very low inode usage.
+- The mounted loop devices are used for container and system files and are not currently full.
+
+Recommendations:
+- Monitor the /vscode mount to prevent the system from reaching higher utilization.
+- Clean up unused temporary or build artifacts in /vscode if disk usage continues to grow.
+- Review container overlay storage if new containers are added frequently, and remove unused images or volumes as needed.
+

@@ -1,0 +1,7 @@
+total 12
+-rw-rw-rw- 1 codespace codespace   0 Jul  3 18:07 combined.txt
+-rw-rw-rw- 1 codespace codespace  21 Jul  3 18:07 hardlink.txt
+-rw-rw-rw- 1 codespace codespace  64 Jul  3 18:07 stderr.txt
+-rw-rw-rw- 1 codespace codespace 207 Jul  3 18:07 stdout.txt
+lrwxrwxrwx 1 codespace codespace  12 Jul  3 18:07 symlink.txt -> original.txt
+ls: cannot access '/not_a_real_path': No such file or directory

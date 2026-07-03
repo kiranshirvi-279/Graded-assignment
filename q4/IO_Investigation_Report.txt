@@ -1,0 +1,22 @@
+Question 4: File Access and I/O Investigation
+
+Open file observed:
+- app.log was opened by the shell process on file descriptor 3.
+
+File descriptor observations:
+- /proc/$$/fd/3 shows the shell has app.log open for reading.
+
+Output redirection results:
+- stdout.txt contains the output of ls -l.
+- stderr.txt contains the error message from ls /not_a_real_path.
+- combined.txt contains both the ls -l output and the error redirected together.
+
+Resource limits observed:
+- open files (-n): 524288
+- file size (-f): unlimited
+- virtual memory (-v): unlimited
+- stack size (-s): 8192 kbytes
+
+Explanation:
+Linux manages file I/O using file descriptors for open files and redirection operators to control stdout and stderr.
+The /proc filesystem exposes active file descriptors and the underlying file paths.
